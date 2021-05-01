@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from app.forms import UsuarioForm
 
 
 # Create your views here.
@@ -7,4 +8,5 @@ def home(request):
 
 
 def form(request):
-    return render(request, "form.html")
+    data = {'form': UsuarioForm()}
+    return render(request, "form.html", data)
