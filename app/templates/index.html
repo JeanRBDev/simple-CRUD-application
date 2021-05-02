@@ -14,32 +14,24 @@
     </div>
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <table class="table">
-          <thead class="table-dark">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+            <thead class="table-dark">
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Admin</th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
+            {% for i in db %}
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <th>{{i.id}}</th>
+              <td>{{i.first_name}}</td>
+              <td>{{i.last_name}}</td>
+              <td>{{i.cpf}}</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+          {% endfor %}
           </tbody>
         </table>
     </div>
